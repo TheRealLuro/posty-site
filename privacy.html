@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy · Posty</title>
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="./"><span class="logo">P</span>Posty</a>
+      <nav class="legal-links" aria-label="Legal">
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html" aria-current="page">Privacy Policy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <article class="doc">
+      <h1>Privacy Policy</h1>
+      <p class="meta">Effective October 15, 2026</p>
+
+      <p>Posty is a desktop application that runs on your own Windows computer. This policy explains what information
+        Posty uses, why, where it is stored, and how you can remove it.</p>
+
+      <h2>1. Information Posty uses</h2>
+      <p><strong>From TikTok, after you connect your account with TikTok Login Kit:</strong></p>
+      <ul>
+        <li><strong>Basic profile</strong> (scope <code>user.info.basic</code>): your open ID, display name and avatar.
+          Posty uses them to show which account is connected and where a video will be posted.</li>
+        <li><strong>Posting</strong> (scopes <code>video.publish</code> and <code>video.upload</code>): permission to
+          publish the videos you approve to your account, or to send them to your TikTok drafts. Before each post, Posty
+          asks TikTok for your current posting options (for example the privacy choices available to you), so it can
+          show them on the Post screen.</li>
+        <li><strong>Your videos' statistics</strong> (scope <code>video.list</code>): the view, like, comment and share
+          counts of your videos. Posty shows them in its Insights screen and uses them to learn which videos your
+          audience prefers.</li>
+      </ul>
+      <p><strong>From you:</strong> the videos, captions, notes, ratings and settings you create in Posty, and any
+        reference videos you choose to upload into it.</p>
+      <p><strong>From other platforms you connect</strong> (Instagram, YouTube): the equivalent account details,
+        publishing permissions and video statistics, under their own sign-in.</p>
+
+      <h2>2. Where it is stored</h2>
+      <ul>
+        <li>Everything is stored locally on your computer, in Posty's data folder.</li>
+        <li>Platform access tokens are stored in Windows Credential Manager, not in plain files.</li>
+        <li>We don't run a server that receives your data. We don't sell, rent or share your data with advertisers.</li>
+      </ul>
+
+      <h2>3. Services Posty sends data to</h2>
+      <ul>
+        <li><strong>The platforms you connect</strong> (TikTok, Instagram, YouTube): the videos, captions and post
+          settings you approve, so they can be published, and the requests needed to read your profile and video
+          statistics.</li>
+        <li><strong>Anthropic (Claude):</strong> Posty uses Anthropic's Claude to plan videos, review video frames for
+          mistakes, write captions, and analyze which videos performed well. For this, video frames, captions, notes
+          and video statistics may be sent to Anthropic's API, under
+          <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a>. Your TikTok access token,
+          avatar and other account credentials are never sent to Anthropic.</li>
+      </ul>
+
+      <h2>4. How long data is kept</h2>
+      <p>Data stays on your computer until you delete it. Video statistics are kept so Posty can compare videos over
+        time.</p>
+
+      <h2>5. Your choices and deleting your data</h2>
+      <ul>
+        <li><strong>Disconnect TikTok</strong> in Posty's Connections screen, or revoke Posty's access in the TikTok app
+          (Settings and privacy → Security → Apps and services permissions). After you disconnect, Posty deletes its
+          stored TikTok token and stops reading your TikTok data.</li>
+        <li><strong>Delete local data</strong> by deleting Posty's data folder. That removes your videos, notes,
+          statistics and settings from Posty.</li>
+        <li>To ask a question or request help removing data, email
+          <a href="mailto:yurikindadopted@gmail.com">yurikindadopted@gmail.com</a>.</li>
+      </ul>
+
+      <h2>6. Children</h2>
+      <p>Posty is not intended for anyone under 18 and does not knowingly process children's data.</p>
+
+      <h2>7. Security</h2>
+      <p>Posty signs in to TikTok with the secure authorization flow TikTok requires for desktop apps (PKCE), keeps
+        tokens in Windows Credential Manager, and only talks to the platforms through their official APIs over HTTPS.</p>
+
+      <h2>8. Changes</h2>
+      <p>We may update this policy. The effective date at the top shows when it last changed.</p>
+
+      <h2>9. Contact</h2>
+      <p><a href="mailto:yurikindadopted@gmail.com">yurikindadopted@gmail.com</a></p>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Posty · Contact: <a href="mailto:yurikindadopted@gmail.com">yurikindadopted@gmail.com</a></span>
+      <nav aria-label="Legal"><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a></nav>
+    </div>
+  </footer>
+</body>
+</html>
