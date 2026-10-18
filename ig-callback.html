@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Back to Posty</title>
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="./"><img class="logo" src="icon.png" alt="">Posty</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <article class="doc">
+      <h1>Back to Posty…</h1>
+      <p id="msg">Taking your Instagram sign-in back to Posty on this computer.</p>
+    </article>
+  </main>
+<script>
+// Instagram only redirects to https pages, so it lands here; Posty runs on this computer at http://127.0.0.1:<port>.
+// The state Posty made is "<port>-<random>": take the port from it, check every value, and send the browser back.
+// Nothing is stored or sent anywhere else. The code is useless without the app secret, which stays on the computer.
+(function () {
+  var q = new URLSearchParams(location.search);
+  var state = q.get("state") || "";
+  var m = /^(\d{2,5})-[A-Za-z0-9_-]{16,64}$/.exec(state);
+  var port = m ? Number(m[1]) : 0;
+  var msg = document.getElementById("msg");
+  if (!m || port < 1024 || port > 65535) { msg.textContent = "This doesn't look like a Posty sign-in. Click Connect in Posty again."; return; }
+  var out = new URLSearchParams();
+  out.set("state", state);
+  ["code", "error", "error_reason", "error_description"].forEach(function (k) {
+    var v = q.get(k);
+    if (v !== null && v.length <= 2048) out.set(k, v);
+  });
+  var target = "http://127.0.0.1:" + port + "/api/v2/platforms/instagram/callback?" + out.toString();
+  var a = document.createElement("a"); a.href = target; a.textContent = "Continue to Posty";
+  msg.textContent = "If nothing happens, ";
+  msg.appendChild(a);
+  location.replace(target);
+})();
+</script>
+</body>
+</html>
