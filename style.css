@@ -12,7 +12,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-
 header.top { border-bottom: 1px solid var(--border); background: var(--surface); }
 header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 14px; padding-bottom: 14px; flex-wrap: wrap; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; color: var(--text); text-decoration: none; }
-.logo { width: 30px; height: 30px; border-radius: 8px; background: linear-gradient(180deg, #f6be5c, #e28a24); color: #1c1610; display: grid; place-items: center; font-weight: 800; }
+.logo { width: 30px; height: 30px; border-radius: 8px; display: block; }
 .legal-links { display: flex; gap: 18px; font-size: 15px; }
 .hero { padding: 64px 0 40px; }
 .hero h1 { font-size: clamp(30px, 5vw, 46px); line-height: 1.15; letter-spacing: -0.01em; max-width: 760px; }
